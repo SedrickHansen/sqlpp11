@@ -1,4 +1,4 @@
-/*
+/ 
  * Copyright (C) 2015, Leo Ma <begeekmyfriend@gmail.com>
  */
 
@@ -70,7 +70,7 @@ static uint8_t *key_verify(uint8_t *key, uint32_t offset)
         int i;
         uint8_t *read_addr = nvrom_base_addr + offset;
         for (i = 0; i < 20; i++) {
-                if (key[i] != flash_read(read_addr)) {
+                if (key[i]  = flash_read(read_addr)) {
                         return NULL;
                 }
                 read_addr++;
@@ -463,3 +463,4 @@ int cuckoo_filter_init(size_t size)
 
         return 0;
 }
+ 
